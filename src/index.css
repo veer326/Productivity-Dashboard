@@ -1,0 +1,219 @@
+:root {
+  --bg: #ffffff;
+  --text: #3f3636;
+}
+
+[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #f0f0f0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+  background-image: url('/public/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.app {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.app h1{
+  color: #8cd9ea;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.widget {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.widget h2 {
+  margin-top: 0;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.input-group button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background: #fff;
+  border-radius: 8px;
+  align-items: center;
+}
+
+li span {
+  cursor: pointer;
+}
+
+li.done span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+li button {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.weather-widget input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.weather-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.weather-info p {
+  margin: 0.25rem 0;
+}
+.quote-widget blockquote {
+  font-style: italic;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid #ccc;
+}
+
+.quote-widget footer {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.quote-widget button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.calendar-widget {
+  text-align: center;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.calendar-header h3 {
+  margin: 0;
+}
+
+.calendar-days,
+.calendar-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-day,
+.calendar-cell {
+  padding: 0.5rem;
+  border: 1px solid #eee;
+}
+
+.calendar-cell {
+  min-height: 40px;
+}
+
+.calendar-cell.today {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.calendar-cell.disabled {
+  color: #ccc;
+}
+/* LIGHT THEME styles */
+body[data-theme='light'] .theme-toggle {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+/* DARK THEME styles */
+body[data-theme='dark'] .theme-toggle {
+  color: #fff;
+  background-color: #333;
+  border: 1px solid #666;
+}
+
+
+body[data-theme='dark'] .widget {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(251, 249, 249, 0.867);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 1px solid #888;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  margin-top: 1rem;
+}
+
+/* Header layout */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
